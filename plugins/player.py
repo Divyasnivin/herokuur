@@ -121,7 +121,7 @@ async def play(_, message: Message):
     global que
     global useer
     await message.delete()
-    lel = await message.reply("**🔎 جاري البحث ...**")
+    lel = await message.reply("** جاري البحث ...**")
 
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -141,13 +141,13 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 اضفني ادمن اولا ...**")
+                        "** ارفني مشرف اولا ...**")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** انا جاهز استخدم📢 /play, .play, bgt, !play, play, @, #, تشغيل **")
+                        message.chat.id, "** الاوامر**\n `جاك شغل` \n `جاك طفها`")
 
                 except UserAlreadyParticipant:
                     pass
@@ -171,7 +171,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**💥 💥 تشغيل 🔊 الموسيقي 💿 اقل ⚡️\n🤟 من⚡️⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
+                f"** تشغيل  الموسيقي  اقل \n من {DURATION_LIMIT}  𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
 
         file_name = get_file_name(audio)
@@ -190,17 +190,17 @@ async def play(_, message: Message):
                ],
                [
                     InlineKeyboardButton(
-                            text="📡 التحديثات",
+                            text=" التحديثات",
                             url=f"{UPDATES_CHANNEL}"),
                             
                     InlineKeyboardButton(
-                            text="الدعم 💬",
+                            text="الدعم ",
                             url=f"{SUPPORT_GROUP}")
                ],
                [
                         InlineKeyboardButton(
-                            text="😎 ثيندر",
-                            url=f"https://t.me/t_hunder")
+                            text="Source jack",
+                            url=f"https://t.me/kbbbd")
                    
                 ]
             ]
@@ -243,17 +243,17 @@ async def play(_, message: Message):
                ],
                [
                     InlineKeyboardButton(
-                            text="📡 التحديثات",
+                            text=" التحديثات",
                             url=f"{UPDATES_CHANNEL}"),
                             
                     InlineKeyboardButton(
-                            text="الدعم 💬",
+                            text="الدعم ",
                             url=f"{SUPPORT_GROUP}")
                ],
                [
                         InlineKeyboardButton(
-                            text="😎 ثيندر",
-                            url=f"https://t.me/t_hunder")
+                            text="Source Jack",
+                            url=f"https://t.me/kbbbd")
                    
                 ]
             ]
@@ -273,17 +273,17 @@ async def play(_, message: Message):
                ],
                [
                     InlineKeyboardButton(
-                            text="📡 التحديثات",
+                            text=" التحديثات",
                             url=f"{UPDATES_CHANNEL}"),
                             
                     InlineKeyboardButton(
-                            text="الدعم 💬",
+                            text="الدعم ",
                             url=f"{SUPPORT_GROUP}")
                ],
                [
                         InlineKeyboardButton(
-                            text="😎 ثيندر",
-                            url=f"https://t.me/T_hunder")
+                            text="Source Jack",
+                            url=f"https://t.me/kbbbd")
                    
                 ]
             ]
@@ -291,7 +291,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 تشغيل 🔊 الموسيقي 💿 اقل ⚡️\n🤟 من⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
+                f"** تشغيل  الموسيقي  اقل \n من {DURATION_LIMIT}  𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -300,9 +300,9 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await lel.edit(
-                "**اعطني اسم اغنيه 😍\n💞 حتا ابدا...**"
+                "**عطني اسم أغنية عشان اشغل...**"
             )
-        await lel.edit("**🔄 جاري المعالجه ...**")
+        await lel.edit("** جاري المعالجه ...**")
         query = message.text.split(None, 1)[1]
         # print(query)
         try:
@@ -327,7 +327,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**🔊لم يتم العثور علي موسيقي❗️\n💞 جرب مره اخري🌷...**"
+                "**لم يتم العثور علي موسيقي\n جرب مره اخري...**"
             )
             print(str(e))
             return
@@ -341,17 +341,17 @@ async def play(_, message: Message):
                ],
                [
                     InlineKeyboardButton(
-                            text="📡 التحديثات",
+                            text=" التحديثات",
                             url=f"{UPDATES_CHANNEL}"),
                             
                     InlineKeyboardButton(
-                            text="الدعم 💬",
+                            text="الدعم ",
                             url=f"{SUPPORT_GROUP}")
                ],
                [
                         InlineKeyboardButton(
-                            text="😎ايثون",
-                            url=f"{PROFILE_CHANNEL}")
+                            text="Source Jack",
+                            url=f"https://t.me/kbbbd")
                    
                 ]
             ]
@@ -359,7 +359,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             await lel.edit(
-                f"**💥 💥 تشغيل 🔊 الموسيقي 💿 اقل ⚡️\n🤟 من⚡️⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
+                f"** تشغيل  الموسيقي  اقل \n من {DURATION_LIMIT}  𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
             )
             return
         requested_by = message.from_user.first_name
@@ -373,7 +373,7 @@ async def play(_, message: Message):
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
             photo="final.png",
-            caption="**💥 اغنيتك في قائمة الانتظار❗️\n🔊 في 💞 الدور » `{}` 🌷 ...**".format(position),
+            caption="** اغنيتك في قائمة الانتظار \n في  الدور » `{}`  ...**".format(position),
             reply_markup=keyboard,
         )
     else:
@@ -390,7 +390,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="**💥 بدا تشغيل  💞\n🔊 الموسيقي ...**".format(),
+            caption="** بدا تشغيل  \n الموسيقي ...**".format(),
            )
 
     os.remove("final.png")
@@ -403,7 +403,7 @@ async def play(_, message: Message):
 async def pause(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("**▶️ تم الايقاف مؤقت 🌷 ...**"
+    await message.reply_text("** تم الايقاف مؤقت  ...**"
     )
 
 
@@ -413,7 +413,7 @@ async def pause(_, message: Message):
 async def resume(_, message: Message):
     await message.delete()
     await clientbot.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("**⏸ تم الاستئناف 🌷 ...**"
+    await message.reply_text("** تم الاستئناف  ...**"
     )
 
 
@@ -429,15 +429,15 @@ async def skip(_, message: Message):
     for x in clientbot.pytgcalls.active_calls:
         ACTV_CALLS.append(int(x.chat_id))
     if int(chat_id) not in ACTV_CALLS:
-        await message.reply_text("**💥 لا يوجد شئ🔇\n🚫 يعمل 🌷 ...**")
+        await message.reply_text("**هيه مافي شي شغال**")
     else:
         queues.task_done(chat_id)
         
         if queues.is_empty(chat_id):
-            await message.reply_text("**🥀 قائمة الانظار فارغه , غادر المساعد المحادثه ✨ ...**") 
+            await message.reply_text("** قائمة الانظار فارغه , غادر المساعد المحادثه  ...**") 
             await clientbot.pytgcalls.leave_group_call(chat_id)
         else:
-            await message.reply_text("**⏩ تم التخطي 🌷 ...**") 
+            await message.reply_text("** تم التخطي  ...**") 
             await clientbot.pytgcalls.change_stream(
                 chat_id, 
                 InputStream(
@@ -460,11 +460,11 @@ async def stop(_, message: Message):
         pass
 
     await clientbot.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("**❌ تم الانهاء 🌷 ...**"
+    await message.reply_text("** تم الانهاء  ...**"
     )
 
 
-@Client.on_message(commandpro(["اعادة تحميل", ".reload", "/reload", "!reload", "/admincache"]))
+@Client.on_message(commandpro(["ريلود", ".reload", "/reload", "!reload", "/admincache"]))
 @errors
 @authorized_users_only
 async def update_admin(client, message):
@@ -475,4 +475,4 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     a[message.chat.id] = new_admins
-    await message.reply_text("**🔥 تم اعادة التحميل 🌷 ...**")
+    await message.reply_text("** تم اعادة التحميل ...**")
