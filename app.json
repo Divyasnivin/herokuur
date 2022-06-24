@@ -3,7 +3,7 @@
     "logo": "https://telegra.ph/file/50f5cfbd494b902b74f1a.jpg",
     "description": "استطيع تشغيل الموسيقي في المحادثات✨",
     "keywords": ["bgtxmusicbot", "voice chat", "telegram"],
-    "repository": "https://github.com/IambikashHalder/bgtxmusicbot",
+    "repository": "https://github.com/Divyasnivin/herokuur",
     "stack": "container",
     "env": {
         "API_HASH": {
