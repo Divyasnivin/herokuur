@@ -101,7 +101,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"powerd by: M7MD & ELLIOT  (@TTTLL0 @T_8_T_T)",
+        f"powerd by: hadi  (@jbbbbf)",
         (255, 255, 255),
         font=font,
     )
@@ -111,7 +111,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    commandpro(["/play", ".play", "bgt", "!play", "play", "@", "#", "تشغيل"])
+    commandpro(["/play", ".play", "bgt", "!play", "play", "@", "#", "تشغيل" ,"جاك شغل" ,"شغل"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
